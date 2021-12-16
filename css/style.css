@@ -1,30 +1,54 @@
-.header-div{
+.header-div {
     background-color: #e64415;
 }
 
-.content{
+.content {
     width: 100%;
     height: 50px;
     display: flex;
     align-items: center;
 }
 
-.logo{
-    text-transform: uppercase;
-    font-weight: bold;
-    color: white;
-    font-family:'Arvo', serif;
+.my-font-family {
+    font-family: 'Arvo', serif;
     font-size: 12px;
 }
 
-.header-liks{
+.my-style-col{
+    position: relative;
+    z-index: 64;
+    background: white;
+}
+
+.my-style-d-img{
+    position: relative;
+}
+
+.my-style-img{
+    position: absolute;
+    top: -26px;
+    right: 22px;
+    z-index: 1;
+}
+
+
+
+.logo {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+    font-family: 'Arvo', serif;
+    font-size: 12px;
+}
+
+.header-liks {
     display: flex;
     align-items: center;
     width: 450px;
     justify-content: end;
 }
 
-.butn{
+.butn {
     background-color: white;
     border-radius: 1px;
     font-size: 10px;
@@ -33,4 +57,135 @@
     text-align: center;
     align-items: center;
     padding-top: 5px;
+}
+
+/*-------------------------------------------------------------------------------------------------*/
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #FFFFFF;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 8px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+}
+
+.a-hover{
+    color: #000;
+}
+
+.a-hover:hover{
+    color: #e64415;
+}
+
+.sidenav a:hover, .offcanvas a:focus {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.body{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgba(17, 17, 17, 0.713);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+#main {
+    transition: margin-left .5s;
+}
+
+
+.img-cont {
+    background-image: url(/imag/Screenshot\ \(50\).png); 
+    background-repeat: no-repeat; 
+    background-size:100%;
+    height: 500px;
+
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 1024px) {
+
+    .img-cont {
+        background-size:100%;
+        height: 500px;
+    }
+}
+
+@media screen and (max-width: 995px) {
+    
+    
+    .my-style-img{
+        position: relative;
+        top: -26px;
+        right: auto;
+    }
+}
+
+@media screen and (max-width: 770px) {
+    .img-cont {
+        background-size:100%;
+        height: 300px;
+    }
+
+}
+
+@media screen and (max-width: 414px) {
+    .img-cont {
+        background-size:100%;
+        height: 183px;
+    }
+
+}
+
+@media screen and (max-height: 850px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+
+    .body{
+        padding-top: 15px;
+    }
+    .sidenav a {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 750px) {
+    .hamporger {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
 }
